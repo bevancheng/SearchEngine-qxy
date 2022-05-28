@@ -1,0 +1,45 @@
+syntax = "proto3";
+package user;
+option go_package = "user";
+
+message BaseResp {
+    int64 status_code = 1;
+    string status_message = 2;
+    int64 service_time = 3;
+}
+
+message UserSignUpRequest{
+    string username = 1;
+    string password = 2;
+}
+
+message UserSignUpResponse{
+    BaseResp base_resp = 1;
+    int64 uesrId = 2;
+    string token = 3;
+}
+
+message UserLogInRequest{
+    string username = 1;
+    string password = 2;
+}
+
+message UserLogInResponse{
+    BaseResp base_resp = 1;
+    int64 uesrId = 2;
+    string token = 3;
+}
+
+message UserLogOutRequest{
+    int64 uesrId = 1;
+}
+
+message UserLogOutResponse{
+    BaseResp base_resp = 1;
+}
+
+service UserService {
+    rpc UserSignUp (UserSignUpRequest) returns (UserSignUpResponse) {}
+    rpc UserLogIn (UserLogInRequest) returns (UserLogInResponse) {}
+    rpc UserLogOut (UserLogOutRequest) returns (UserLogOutResponse) {}
+}

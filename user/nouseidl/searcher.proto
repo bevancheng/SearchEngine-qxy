@@ -1,0 +1,40 @@
+syntax = "proto3";
+package searcher;
+option go_package = "searcher";
+
+message BaseResp {
+    int64 status_code = 1;
+    string status_message = 2;
+    int64 service_time = 3;
+}
+
+message IndexRequest {
+    uint64 id = 1;
+    string text = 2;
+    bytes document =3;
+}
+
+message IndexResponse{
+
+}
+
+message MIndexRequest{
+
+}
+
+message MIndexResponse{}
+
+message QueryRequest{}
+
+message QueryResponse{}
+
+message RemoveRequest{}
+
+message RemoveResponse{}
+
+service SearcherService{
+    rpc Index (IndexRequest) returns (IndexResponse) {}
+    rpc MIndex (MIndexRequest) returns (MIndexResponse) {}
+    rpc Query (QueryRequest) returns (QueryResponse){}
+    rpc Remove (RemoveRequest) returns (RemoveResponse) {} 
+}

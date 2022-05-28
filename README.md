@@ -106,6 +106,8 @@ invertedIndexStorage: key = 单个分词 string->[]byte ; value = {ids}对应doc
 
 正排索引
 
+[正排索引和倒排索引 - 郭慕荣 - 博客园 (cnblogs.com)](https://www.cnblogs.com/jelly12345/p/15016494.html)
+
 gojiaba分词
 
 数据库：leveldb？
@@ -118,3 +120,5 @@ gojiaba分词
 增删查接口：
 http服务：
 
+
+简化，不分片

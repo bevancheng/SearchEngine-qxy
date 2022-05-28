@@ -1,0 +1,75 @@
+syntax = "proto3";
+package userdb;
+option go_package = "userdb";
+message BaseResp {
+    int64 status_code = 1;
+    string status_message = 2;
+    int64 service_time = 3;
+}
+
+message UserSignUpRequest{
+    string username = 1;
+    string password = 2;
+}
+
+message UserSignUpResponse{
+    BaseResp base_resp = 1;
+}
+
+message UserLogInRequest{
+    string username = 1;
+    string password = 2;
+}
+
+message UserLogInResponse{
+    BaseResp base_resp = 1;
+}
+
+message AddFavoriteRequest{
+
+}
+
+message AddFavoriteResponse{
+
+}
+
+message DelFavoriteRequest{
+
+}
+
+message DelFavoriteResponse{
+
+}
+
+message RenameFavoriteRequest{
+
+}
+
+message RenameFavoriteResponse{
+
+}
+
+message AddResultRequest{
+
+}
+
+message AddResultResponse{
+
+}
+
+message DelResultRequest{
+
+}
+
+message DelResultResponse{
+    
+}
+service DBofUserService{
+    rpc UserSignUp (UserSignUpRequest) returns (UserSignUpResponse) {}
+    rpc UserLogIn (UserLogInRequest) returns (UserLogInResponse) {}
+    rpc AddFavorite (AddFavoriteRequest) returns (AddFavoriteResponse) {}
+    rpc DelFavorite (DelFavoriteRequest) returns (DelFavoriteResponse) {}
+    rpc RenameFavorite (RenameFavoriteRequest) returns (RenameFavoriteResponse) {}
+    rpc AddResult (AddResultRequest) returns (AddResultResponse) {}
+    rpc DelResult (DelResultRequest) returns (DelResultResponse) {}
+}

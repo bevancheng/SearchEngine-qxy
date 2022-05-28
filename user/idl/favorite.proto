@@ -1,0 +1,72 @@
+syntax = "proto3";
+package favorite;
+option go_package = "favorite";
+
+message BaseResp {
+    int64 status_code = 1;
+    string status_message = 2;
+    int64 service_time = 3;
+}
+
+message AddFavoriteRequest{
+    string favoriteName = 1;
+    int64 uesrId = 2;
+    string token = 3;
+}
+
+message AddFavoriteResponse{
+    BaseResp base_resp = 1;
+    int64 favoriteId = 2;
+}
+
+message DelFavoriteRequest{
+    string favoriteName = 1;
+    int64 uesrId = 2;
+    string token = 3;
+}
+
+message DelFavoriteResponse{
+    BaseResp base_resp = 1;
+}
+
+message RenameFavoriteRequest{
+    int64 favoriteId = 1;
+    string newFavoriteName = 2;
+    int64 uesrId = 3;
+    string token = 4;
+}
+
+message RenameFavoriteResponse{
+    BaseResp base_resp = 1;
+}
+
+message AddResultRequest{
+    int64 favoriteId = 1;
+    int64 indexId = 2;
+    int64 uesrId = 3;
+    string token = 4;
+}
+
+message AddResultResponse{
+    BaseResp base_resp = 1;
+}
+
+message DelResultRequest{
+    int64 favoriteId = 1;
+    int64 indexId = 2;
+    int64 uesrId = 3;
+    string token = 4;
+}
+
+message DelResultResponse{
+    BaseResp base_resp = 1;
+}
+
+service FavoritesSercice{
+    rpc AddFavorite (AddFavoriteRequest) returns (AddFavoriteResponse) {}
+    rpc DelFavorite (DelFavoriteRequest) returns (DelFavoriteResponse) {}
+    rpc RenameFavorite (RenameFavoriteRequest) returns (RenameFavoriteResponse) {}
+    rpc AddResult (AddResultRequest) returns (AddResultResponse) {}
+    rpc DelResult (DelResultRequest) returns (DelResultResponse) {}
+}
+

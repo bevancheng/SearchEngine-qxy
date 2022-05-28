@@ -1,0 +1,1 @@
+kitex -type protobuf -module userser -service favoritedemo -I ../../idl/ ../../idl/favorite.proto
