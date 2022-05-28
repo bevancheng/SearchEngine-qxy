@@ -3,7 +3,7 @@ package pack
 import (
 	"errors"
 	"time"
-	"userser/cmd/user/kitex_gen/user"
+	"userser/kitex_gen/user"
 	"userser/pkg/errno"
 )
 

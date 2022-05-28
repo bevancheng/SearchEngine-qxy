@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 	"userser/cmd/user/dal/db"
-	"userser/cmd/user/kitex_gen/user"
+	"userser/kitex_gen/user"
 	"userser/pkg/errno"
 )
 

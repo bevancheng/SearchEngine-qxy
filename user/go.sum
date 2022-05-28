@@ -216,6 +216,8 @@ github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+o
 github.com/kitex-contrib/registry-etcd v0.0.0-20220110034026-b1c94979cea3 h1:6Jo5hYZwLVRvIFaFGylb7j/SKxMseADqPMGJcXDC8LE=
 github.com/kitex-contrib/registry-etcd v0.0.0-20220110034026-b1c94979cea3/go.mod h1:UqdqV26hb+NHyhD5zT4v0VGsoPcciSz8mSBiYGvYf7A=
 github.com/kitex-contrib/tracer-opentracing v0.0.2/go.mod h1:mprt5pxqywFQxlHb7ugfiMdKbABTLI9YrBYs9WmlK5Q=
+github.com/kitex-contrib/tracer-opentracing v0.0.3 h1:8SI0OrHTQ8u6eWpemnuaecMBSEVEvWKCWxg2HnnONQU=
+github.com/kitex-contrib/tracer-opentracing v0.0.3/go.mod h1:mprt5pxqywFQxlHb7ugfiMdKbABTLI9YrBYs9WmlK5Q=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.3/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/kr/logfmt v0.0.0-20140226030751-b84e30acd515/go.mod h1:+0opPa2QZZtGFBFZlji/RkVcI2GknAs/DXo4wKdlNEc=

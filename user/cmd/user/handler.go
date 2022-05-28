@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"userser/cmd/user/kitex_gen/user"
 	"userser/cmd/user/pack"
 	"userser/cmd/user/service"
+	"userser/kitex_gen/user"
 	"userser/pkg/errno"
 )
 

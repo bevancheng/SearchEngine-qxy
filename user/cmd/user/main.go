@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net"
-	user "userser/cmd/user/kitex_gen/user/userservice"
+	user "userser/kitex_gen/user/userservice"
 	"userser/pkg/constants"
 
 	"github.com/cloudwego/kitex/pkg/rpcinfo"
