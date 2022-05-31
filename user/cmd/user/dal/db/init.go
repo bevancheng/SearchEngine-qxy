@@ -33,5 +33,4 @@ func Init() {
 	if err = m.CreateTable(&User{}); err != nil {
 		panic(err)
 	}
-
 }

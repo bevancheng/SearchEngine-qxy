@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"userser/cmd/favorite/kitex_gen/favorite"
+	"userser/kitex_gen/favorite"
 )
 
 // FavoritesSerciceImpl implements the last service interface defined in the IDL.

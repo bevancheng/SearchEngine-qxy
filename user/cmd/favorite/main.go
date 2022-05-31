@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net"
-	favorite "userser/cmd/favorite/kitex_gen/favorite/favoritessercice"
+	favorite "userser/kitex_gen/favorite/favoritessercice"
 	"userser/pkg/constants"
 
 	"github.com/cloudwego/kitex/pkg/rpcinfo"

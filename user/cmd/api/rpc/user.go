@@ -1,9 +1,12 @@
 package rpc
 
 import (
+	"context"
 	"time"
+	"userser/kitex_gen/user"
 	"userser/kitex_gen/user/userservice"
 	"userser/pkg/constants"
+	"userser/pkg/errno"
 
 	"github.com/cloudwego/kitex/client"
 	"github.com/cloudwego/kitex/pkg/retry"
@@ -33,4 +36,26 @@ func initUserRPC() {
 		panic(err)
 	}
 	userClient = c
+}
+
+func CheckUser(ctx context.Context, req *user.UserLogInRequest) (int64, error) {
+	resp, err := userClient.UserLogIn(ctx, req)
+	if err != nil {
+		return 0, err
+	}
+	if resp.BaseResp.StatusCode != 0 {
+		return 0, errno.NewErrNo(resp.BaseResp.StatusCode, resp.BaseResp.StatusMessage)
+	}
+	return resp.UserId, nil
+}
+
+func CreateUser(ctx context.Context, req *user.UserSignUpRequest) error {
+	resp, err := userClient.UserSignUp(ctx, req)
+	if err != nil {
+		return err
+	}
+	if resp.BaseResp.StatusCode != 0 {
+		return errno.NewErrNo(resp.BaseResp.StatusCode, resp.BaseResp.StatusMessage)
+	}
+	return nil ////////////////wrong
 }

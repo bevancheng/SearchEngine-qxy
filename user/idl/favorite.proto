@@ -11,7 +11,7 @@ message BaseResp {
 message AddFavoriteRequest{
     string favoriteName = 1;
     int64 uesrId = 2;
-    string token = 3;
+
 }
 
 message AddFavoriteResponse{
@@ -22,7 +22,7 @@ message AddFavoriteResponse{
 message DelFavoriteRequest{
     string favoriteName = 1;
     int64 uesrId = 2;
-    string token = 3;
+
 }
 
 message DelFavoriteResponse{
@@ -33,7 +33,7 @@ message RenameFavoriteRequest{
     int64 favoriteId = 1;
     string newFavoriteName = 2;
     int64 uesrId = 3;
-    string token = 4;
+
 }
 
 message RenameFavoriteResponse{
@@ -44,7 +44,7 @@ message AddResultRequest{
     int64 favoriteId = 1;
     int64 indexId = 2;
     int64 uesrId = 3;
-    string token = 4;
+
 }
 
 message AddResultResponse{
@@ -55,7 +55,7 @@ message DelResultRequest{
     int64 favoriteId = 1;
     int64 indexId = 2;
     int64 uesrId = 3;
-    string token = 4;
+
 }
 
 message DelResultResponse{

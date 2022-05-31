@@ -16,7 +16,7 @@ message UserSignUpRequest{
 message UserSignUpResponse{
     BaseResp base_resp = 1;
     int64 uesrId = 2;
-    string token = 3;
+
 }
 
 message UserLogInRequest{
@@ -26,12 +26,12 @@ message UserLogInRequest{
 
 message UserLogInResponse{
     BaseResp base_resp = 1;
-    int64 uesrId = 2;
-    string token = 3;
+    int64 userId = 2;
+
 }
 
 message UserLogOutRequest{
-    int64 uesrId = 1;
+    int64 userId = 1;
 }
 
 message UserLogOutResponse{

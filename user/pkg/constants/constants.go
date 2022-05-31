@@ -5,5 +5,10 @@ const (
 	UserServiceName     = "UserService"
 	FavoriteServiceName = "FavoriteService"
 	MySQLDefaultDSN     = "gorm:gorm@tcp(localhost:8810)/gorm?charset=utf8&parseTime=True&loc=Local"
-	UserTableName       = "UserTable"
+	UserTableName       = "user"
+	SecretKey           = "secret key"
+	IdentityKey         = "id"
+	ApiServiceName      = "Api"
+	FavoriteTable       = "favorite"
+	FavoriteDBPath      = "./favoritedata"
 )

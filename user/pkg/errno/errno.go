@@ -27,6 +27,10 @@ const (
 	LoginErrCode            = 10003
 	UserNotExistErrCode     = 10004
 	UserAlreadyExistErrCode = 10005
+	FavAlreadyExistErrCode  = 10006
+	FavNotExistErrCode      = 10007
+	ResAlreadyExistErrCode  = 10008
+	ResNotExistErrCode      = 10009
 )
 
 type ErrNo struct {
@@ -54,6 +58,10 @@ var (
 	LoginErr            = NewErrNo(LoginErrCode, "Wrong username or password")
 	UserNotExistErr     = NewErrNo(UserNotExistErrCode, "User does not exists")
 	UserAlreadyExistErr = NewErrNo(UserAlreadyExistErrCode, "User already exists")
+	FavAlreadyExistErr  = NewErrNo(FavAlreadyExistErrCode, "This Favorite already exists")
+	FavNotExistErr      = NewErrNo(FavNotExistErrCode, "This Favorite not exist")
+	ResAlreadyExistErr  = NewErrNo(ResAlreadyExistErrCode, "ResAlreadyExistErr")
+	ResNotExistErr      = NewErrNo(ResNotExistErrCode, "ResNotExistErr")
 )
 
 // ConvertErr convert error to Errno

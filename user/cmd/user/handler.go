@@ -44,7 +44,7 @@ func (s *UserServiceImpl) UserLogIn(ctx context.Context, req *user.UserLogInRequ
 		resp.BaseResp = pack.BuildBaseResp(err)
 		return resp, err
 	}
-	resp.UesrId = userid
+	resp.UserId = userid
 	resp.BaseResp = pack.BuildBaseResp(errno.Success)
 	return resp, nil
 }
